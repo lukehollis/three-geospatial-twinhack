@@ -1,0 +1,55 @@
+{
+  "name": "map",
+  "sourceRoot": "apps/map/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["dist/apps/map"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/map"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "map:build:development"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "map:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "map:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "map:build:development"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/map/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
