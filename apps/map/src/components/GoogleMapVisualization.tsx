@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { googleMapsLoadedAtom } from './GoogleMapLoader';
 import { useAtomValue } from 'jotai';
 import { Simulation, Actor, PlaybackState } from '../services/SimulationService';
-import { getPositionAlongRoute } from '../utils/geospatialUtils';
+import { getPositionAlongRoute } from '../utils/geospatial';
 import { actorPaths } from '../utils/actors';
 import RiskHeatmapOverlay, { fetchRouteRiskAssessment, generateRouteRiskPoints } from './RiskOverlayHeatmap';
 

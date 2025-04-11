@@ -10,7 +10,7 @@ import {
   initialPlaybackState,
 } from '../services/SimulationService';
 import { useRiskAssessment, RiskPoint, fetchRouteRiskAssessment, generateRouteRiskPoints } from '../hooks/useRiskAssessment';
-import { calculateHeading, getPositionAlongRoute, calculateCartesianFromGeodetic, calculateGeodeticFromCartesian } from '../utils/geospatialUtils';
+import { calculateHeading, getPositionAlongRoute, calculateCartesianFromGeodetic, calculateGeodeticFromCartesian } from '../utils/geospatial';
 import { simulationTextInputAtom } from './CreatorToolContainer';
 import Actor3D from './Actor3D';
 import RouteVisualization from './RouteVisualization';

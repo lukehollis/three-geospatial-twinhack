@@ -6,7 +6,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Routes, Route, Navigate, useParams } from 'react-router';
 import SimulationContainer from './SimulationContainer';
 import InfoPanel from './components/InfoPanel';
-import Auth0ProviderWithConfig from './auth/Auth0Provider';
 import { QueryClient } from '@tanstack/react-query';
 import { SimulationService } from './services/SimulationService';
 import { useSimulations } from './hooks/useSimulations';
@@ -92,14 +91,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Provider>
-        <Auth0ProviderWithConfig>
-          <AppInitializer />
-          <Routes>
-            <Route path="/" element={<MainView />} />
-            <Route path="/sim/:id/:slug" element={<SimulationLoader />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Auth0ProviderWithConfig>
+        <AppInitializer />
+        <Routes>
+          <Route path="/" element={<MainView />} />
+          <Route path="/sim/:id/:slug" element={<SimulationLoader />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </Provider>
       {/* Add React Query Devtools - only in development */}
       {import.meta.env['VITE_DEBUG_MODE'] === 'true' && 

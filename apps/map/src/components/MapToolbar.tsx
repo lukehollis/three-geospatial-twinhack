@@ -2,7 +2,6 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { Button, Checkbox } from '@blueprintjs/core';
 import { useAtom } from 'jotai';
-import AuthButton from './AuthButton';
 import { mapViewModeAtom, showRealtimeDataAtom } from '../helpers/states';
 
 const MapToolbar: React.FC = () => {
@@ -50,7 +49,6 @@ const MapToolbar: React.FC = () => {
       >
         {mapViewMode === '2D' ? '3D' : '2D'}
       </Button>
-      <AuthButton />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Line } from '@react-three/drei';
 import { Route } from '../services/SimulationService';
 import * as THREE from 'three';
-import { calculateCartesianFromGeodetic, calculateGreatCircleDistance } from '../utils/geospatialUtils';
+import { calculateCartesianFromGeodetic, calculateGreatCircleDistance } from '../utils/geospatial';
 
 /****
  * 

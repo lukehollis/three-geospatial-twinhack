@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Line } from '@react-three/drei';
-import { calculateCartesianFromGeodetic } from '../utils/geospatialUtils';
+import { calculateCartesianFromGeodetic } from '../utils/geospatial';
 import { Route } from '../services/SimulationService'; // Assuming basic Route type is sufficient
 import * as THREE from 'three';
 

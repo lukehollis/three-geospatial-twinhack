@@ -3,7 +3,7 @@ import * as THREE from 'three';
 // import { useFrame } from '@react-three/fiber'; // Not needed for animation yet
 import { RiskPoint, getRiskWeightAtPoint, getColorFromGradient } from '../hooks/useRiskAssessment';
 // Ensure these geospatial utilities are correctly implemented and imported
-import { calculateCartesianFromGeodetic, calculateGeodeticFromCartesian } from '../utils/geospatialUtils';
+import { calculateCartesianFromGeodetic, calculateGeodeticFromCartesian } from '../utils/geospatial';
 // Using turf for distance calculation might be removed if getRiskWeightAtPoint handles it
 // import { distance } from '@turf/turf';
 

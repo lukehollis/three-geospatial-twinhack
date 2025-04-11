@@ -7,7 +7,6 @@ import { Provider, createStore } from 'jotai'
 import { BrowserRouter } from 'react-router'
 // Import build information
 import buildInfo from './buildInfo.json'
-import Auth0Provider from './auth/Auth0Provider'
 
 // Create a Jotai store and make it globally available
 const jotaiStore = createStore();
@@ -27,9 +26,7 @@ createRoot(document.getElementById('root')!).render(
   <Provider store={jotaiStore}>
       <Leva hidden={import.meta.env['VITE_DEBUG_MODE'] !== 'true'} collapsed={import.meta.env['VITE_DEBUG_MODE'] === 'true'} />
     <BrowserRouter>
-      <Auth0Provider>
         <App />
-      </Auth0Provider>
     </BrowserRouter>
   </Provider>
 )
